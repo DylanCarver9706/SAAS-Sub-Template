@@ -15,10 +15,6 @@ To use this template for your own project, follow these steps:
 
 1. Clone the repository to your local machine
 2. Delete the `.git` directory
-3. Initialize a new git repository:
-   ```bash
-   git init
-   ```
 4. Create a `.env.local` file in the root directory and add the following environment variables:
 
    ```
@@ -52,15 +48,15 @@ To use this template for your own project, follow these steps:
    npm run dev
    ```
 
+8. Add and commit your project code
 7. Check for build issues:
 
    ```bash
    npm run build
    ```
-
-8. Add and commit your project code
 9. Set up your remote repository:
    ```bash
+   git init
    git remote add origin https://github.com/username/new-repo.git
    git branch -M main
    git push -u origin main
