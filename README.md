@@ -14,8 +14,10 @@ A modern web application built with Next.js that provides PDF utilities with a s
 To use this template for your own project, follow these steps:
 
 1. Clone the repository to your local machine
+
 2. Delete the `.git` directory
-4. Create a `.env.local` file in the root directory and add the following environment variables:
+
+3. Create a `.env.local` file in the root directory and add the following environment variables:
 
    ```
    # Clerk Authentication
@@ -36,29 +38,32 @@ To use this template for your own project, follow these steps:
    - **PostHog**: Visit https://us.posthog.com, go to Settings > Project Details to get the project API key
    - **Stripe**: Navigate to https://dashboard.stripe.com/test/apikeys to get the publishable and secret keys
 
-5. Install dependencies:
+4. Install dependencies:
 
    ```bash
    npm install
    ```
 
-6. Run the development server:
+5. Run the development server:
 
    ```bash
    npm run dev
    ```
 
-8. Add and commit your project code
-7. Check for build issues:
+6. Check for build issues:
 
    ```bash
    npm run build
    ```
-9. Set up your remote repository:
+
+7. Set up your remote repository:
    ```bash
+   # First, create a new repository on GitHub.com
+   # Then run these commands:
    git init
-   git remote add origin https://github.com/username/new-repo.git
+   git remote add origin https://github.com/username/your-repo-name.git
    git branch -M main
+   # Add and commit your code
    git push -u origin main
    ```
 
