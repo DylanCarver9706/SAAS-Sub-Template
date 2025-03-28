@@ -29,6 +29,9 @@ export function PdfToPowerPoint() {
   const { user, isSignedIn } = useUser();
 
   useEffect(() => {
+    const storedCount = localStorage.getItem("pdfToPowerPointUsageCount");
+    setUsageCount(storedCount ? parseInt(storedCount) : 0);
+
     if (user) {
       checkSubscriptionStatus();
     }

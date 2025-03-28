@@ -6,7 +6,6 @@ import { saveAs } from "file-saver";
 import {
   Upload,
   FileUp,
-  Download,
   X,
   GripVertical,
   ChevronUp,

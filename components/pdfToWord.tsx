@@ -29,6 +29,9 @@ export function PdfToWord() {
   const { user, isSignedIn } = useUser();
 
   useEffect(() => {
+    const storedCount = localStorage.getItem("pdfToWordUsageCount");
+    setUsageCount(storedCount ? parseInt(storedCount) : 0);
+
     if (user) {
       checkSubscriptionStatus();
     }
@@ -53,7 +56,7 @@ export function PdfToWord() {
       setHasActiveSubscription(activeSubscription);
 
       if (user && activeSubscription) {
-        localStorage.removeItem("pdfToPngUsageCount");
+        localStorage.removeItem("pdfToWordUsageCount");
         setUsageCount(0);
       }
     } catch (error) {

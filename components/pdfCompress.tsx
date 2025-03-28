@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { PDFDocument } from "pdf-lib";
 import { saveAs } from "file-saver";
-import { Upload, FileUp, Download, X } from "lucide-react";
+import { Upload, FileUp, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 import { Card } from "./ui/card";
