@@ -19,8 +19,47 @@ To use this template for your own project, follow these steps:
    ```bash
    git init
    ```
-4. Add and commit your project code
-5. Set up your remote repository:
+4. Create a `.env.local` file in the root directory and add the following environment variables:
+
+   ```
+   # Clerk Authentication
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+
+   # PostHog Analytics
+   NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key
+
+   # Stripe Payments
+   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   ```
+
+   To get these keys:
+
+   - **Clerk**: Go to https://dashboard.clerk.com, click Configure > API Keys to get the publishable and secret keys
+   - **PostHog**: Visit https://us.posthog.com, go to Settings > Project Details to get the project API key
+   - **Stripe**: Navigate to https://dashboard.stripe.com/test/apikeys to get the publishable and secret keys
+
+5. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+6. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+7. Check for build issues:
+
+   ```bash
+   npm run build
+   ```
+
+8. Add and commit your project code
+9. Set up your remote repository:
    ```bash
    git remote add origin https://github.com/username/new-repo.git
    git branch -M main
