@@ -93,10 +93,16 @@ To use this template for your own project, follow these steps:
    - Use purchased custom domain in deployed Amplify app using this [tutorial](https://www.youtube.com/watch?v=uaG2mMYLI68)
    - On the Clerk production instance dashboard, navigate to Configure -> Domains then proceed to next step
    - Navigate to [AWS Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/) to add the Clerk domain records. From the Route 53 dashboard, navigate to Hosted Zones -> select the app domain -> Create Record -> Simple routing -> Next -> Define simple record
-   - Add a simple record for each Clerk record required individually and then click "Create records"
-   - Click "Verify configuration" on the domains page in clerk to verify records were found
+      - Add a simple record for each Clerk record required individually and then click "Create records"
+         - Clerk will say: "Add a `CNAME` record for `clerk` pointing to `frontend-api.clerk.services`"
+         - In the Route 53 form:
+            - `clerk` goes in the `Record name`/`subdomain` field
+            - `CNAME` gets selected from the `Record type` dropdown
+            - `frontend-api.clerk.services` gets selected from the `Value/Route traffic to` field
+      - When done adding records, click "Create records"
+   - Click "Verify configuration" on the domains page in Clerk to verify records were found
    - Get the client ID and Client Secret for Google SSO connection by following the steps [here](https://clerk.com/docs/authentication/social-connections/google#create-a-google-developer-project)
-   - Paste those values in at the Clerk production dashboard at Configure -> SSO connections and clicking the Google social provider card and click Update
+      - Paste those values in at the Clerk production dashboard at Configure -> SSO connections and clicking the Google social provider card and click Update
    - Done!
 
 ## Features
